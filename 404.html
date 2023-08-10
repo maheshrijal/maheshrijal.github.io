@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Redirect</title>
-        <script>
-            var path = window.location.pathname;
-            
-            if (path === "/files") {
-                document.location.replace("https://github.com/maheshrjl/files" + path);
-            } else {
-                document.location.replace("https://github.com/maheshrjl" + path);
-            }
-        </script>
-    </head>
-    <body></body>
+<head>
+<title>Redirect</title>
+<script>
+    var path = window.location.pathname;
+    var username = "maheshrjl"; // Replace with your GitHub username
+
+    // Remove the leading slash from the path
+    path = path.slice(1);
+
+    // Construct the GitHub URL using the captured path and username
+    var githubURL = "https://github.com/" + username + "/" + path;
+
+    // Redirect to the constructed GitHub URL
+    document.location.replace(githubURL);
+</script>
+</head>
+<body>
+</body>
 </html>
