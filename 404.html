@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<head>
-<title>Redirect</title>
-</head>
-<script>
-    document.location.replace("https://github.com/maheshrjl/")
-</script>
+<html>
+    <head>
+        <title>Redirect</title>
+        <script>
+            var path = window.location.pathname;
+            
+            if (path === "/files") {
+                document.location.replace("https://github.com/maheshrjl/files" + path);
+            } else {
+                document.location.replace("https://github.com/maheshrjl" + path);
+            }
+        </script>
+    </head>
+    <body></body>
 </html>
